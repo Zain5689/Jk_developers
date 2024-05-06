@@ -36,3 +36,15 @@ spans.forEach((span, index) => {
     boxes[index].scrollIntoView({ behavior: "smooth", block: "start" });
   });
 });
+
+/*************************Customer***********************/
+let customers = document.querySelectorAll(".customer");
+
+let headings = document.querySelectorAll(".customer h3");
+
+customers.forEach((customer, index) => {
+  customer.addEventListener("click", function () {
+    customer.classList.add("activ");
+    headings[index].classList.add("activs");
+  });
+});
