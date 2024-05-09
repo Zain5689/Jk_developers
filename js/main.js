@@ -38,13 +38,81 @@ spans.forEach((span, index) => {
 });
 
 /*************************Customer***********************/
-let customers = document.querySelectorAll(".customer");
+// let customers = document.querySelectorAll(".customer");
 
-let headings = document.querySelectorAll(".customer h3");
+// let headings = document.querySelectorAll(".customer h3");
 
-customers.forEach((customer, index) => {
-  customer.addEventListener("click", function () {
-    customer.classList.add("activ");
-    headings[index].classList.add("activs");
+// customers.forEach((customer, index) => {
+//   customer.addEventListener("click", function () {
+//     customers.foreach((customer, i) => {
+//       customer.classlist.remove("activ");
+//       headings[i].classlist.remove("activs");
+//     });
+
+//     customer.classList.add("activ");
+//     headings[index].classList.add("activs");
+//   });
+// });
+
+/***********************  Skills  *********************/
+// let skills = document.querySelectorAll(".stack ul li");
+// let parts = document.querySelectorAll(".image .img");
+
+// skills.forEach((skill) => {
+//   skill.addEventListener("click", () => {
+//     let valueAttr = skill.getAttribute("data-filter");
+//     // console.log(skill.getAttribute("data-filter"));
+//     parts.forEach((part) => {
+//       part.style.display = "none";
+//       if (
+//         part.getAttribute("data-filter").toLowerCase() ===
+//         valueAttr.toLowerCase()
+//       ) {
+//         part.style.display = "flex";
+//       }
+//     });
+//     parts.forEach((part) => {
+//       part.classList.remove("activity");
+//     });
+
+//     parts.forEach((part) => {
+//       part.classList.add("activity");
+//     });
+
+//     skills.forEach((skill) => {
+//       skill.classList.remove("act");
+//     });
+//     skill.classList.add("act");
+//   });
+// });
+
+const menuCategories = document.querySelectorAll(".stack ul li");
+const menuProducts = document.querySelectorAll(".image .img");
+
+menuCategories.forEach((category) => {
+  category.addEventListener("click", () => {
+    const valueAttr = category.getAttribute("data-filter");
+
+    menuProducts.forEach((product) => {
+      product.style.display = "none";
+      if (
+        product.getAttribute("data-filter").toLowerCase() ===
+        valueAttr.toLowerCase()
+      ) {
+        product.style.display = "flex";
+      }
+    });
+
+    menuProducts.forEach((product) => {
+      product.classList.remove("activity");
+    });
+    menuCategories.forEach((product) => {
+      product.classList.add("activity");
+    });
+
+    menuCategories.forEach((category) => {
+      category.classList.remove("act");
+    });
+    category.classList.add("act");
   });
 });
