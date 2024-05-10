@@ -798,20 +798,12 @@ main .landing .text button:hover {
 }
 .studies .content .boxs .info a {
   position: absolute;
-  right: 40px;
+  right: 30px;
   bottom: 20px;
   background: -webkit-linear-gradient(#f7666f, #57007b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   cursor: pointer;
-}
-.studies .content a .right {
-  animation: moving-arrow 0.6s infinite linear;
-}
-@keyframes moving-arrow {
-  100% {
-    transform: translateX(5px);
-  }
 }
 .studies .content .boxs .box .img {
   width: 50%;
@@ -1278,9 +1270,6 @@ main .landing .text button:hover {
 }
 .features .boxs .box a span {
   margin-left: 5px;
-}
-.features .boxs .box a span .right {
-  animation: moving-arrow 0.6s infinite linear;
 }
 .features .boxs .box img {
   max-width: 200px;
